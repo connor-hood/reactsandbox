@@ -6,11 +6,8 @@ class Die extends Component {
         super(props);
         this.state = {
             value: null,
-            numberOfSides: null
         }
     }
-    
-
     componentDidMount(){
         let result = this.setDieValue();
         this.setState({
@@ -18,33 +15,38 @@ class Die extends Component {
             numberOfSides: this.props.numberOfSides
         });
     }
-
-
     rollClick(){
         let newResult = this.setDieValue();
         this.setState({
             value: newResult
         });
     }
-    
-
+    sideButtonClick(){
+        let sideResult = this.setSideInput();
+        this.setState({
+            numberOfSides: sideResult
+        });
+    }
     setDieValue(){
         return Math.floor(Math.random() * this.props.numberOfSides) + 1;
     }
-
     getUserInput(){
         return prompt("What is your favorite movie?");
     }
-
-
+    getSideInput(){
+        
+    }
     render(){
         return (
             <div>
-                <h1>Die number of sides: {this.state.numberOfSides}</h1>
+                <h1>Die number of sides: {this.props.numberOfSides}</h1>
                 <h2>Die value: {this.state.value}</h2>
                 {/* this is how you call props in from outside this file in main.js */}
                 <button onClick={() => this.props.buttonClick(this.getUserInput())}>
                     Click Me!
+                </button>
+                <button onClick={() => this.props.sideButtonClick(this.getSideInput())}>
+                    Set Side Count
                 </button>
                 {/* this is how you call functions defined above^ */}
                 <button onClick={() => this.rollClick()}>
