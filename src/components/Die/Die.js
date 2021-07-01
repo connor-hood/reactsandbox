@@ -39,6 +39,7 @@ class Die extends Component {
     render(){
         return (
             <div>
+                {/*this.props.numberOfSides since numberOfSides comes in from Main now */}
                 <h1>Die number of sides: {this.props.numberOfSides}</h1>
                 <h2>Die value: {this.state.value}</h2>
                 {/* this is how you call props in from outside this file in main.js */}
