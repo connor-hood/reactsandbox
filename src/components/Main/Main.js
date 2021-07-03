@@ -25,13 +25,15 @@ class Main extends Component{
     return(
       <div className='App'>
           <h1 style={{textAlign:'center'}}>React Sandbox</h1>
+          <h4 style={{textAlign: 'center'}}>Demonstration of props being passed into component</h4>
         <h1>Match up of the Week</h1>
         <Matchup 
         // these are the props that get called in the function
             homeTeam = "Packers"
             awayTeam = "Patnthers"/>
-    {/* number of sides gets passed down to Die  */}
     <hr />
+    {/* number of sides gets passed down to Die from state */}
+    <h4 style={{textAlign: 'center'}}>Demonstration of functions from components being passed back up from child</h4>
         <Die 
             numberOfSides={this.state.numberOfSides}
             buttonClick={(message) => this.display(message)}
