@@ -9,7 +9,10 @@ class TodosList extends Component {
                 <ul>
                     {/*this.props.todos matches the name of the prop in todoContainer */}
                     {this.props.todos.map(todo => (
-                        <TodoItem key={todo.id} todo={todo} />
+                        <TodoItem 
+                        key={todo.id}
+                        todo={todo}
+                        handleChangeProps={this.props.handleChangeProps} />
                     ))}
                 </ul>
             </div>
