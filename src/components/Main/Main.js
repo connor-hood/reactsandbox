@@ -3,6 +3,8 @@ import Matchup from '../Matchup/Matchup';
 import Die from '../Die/Die';
 import TodoContainer from '../TodoContainer/todoContainer';
 
+import "../../App.css"
+
 class Main extends Component{
     constructor(props){
         super(props);
