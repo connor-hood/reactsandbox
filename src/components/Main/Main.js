@@ -40,6 +40,7 @@ class Main extends Component{
             sideButtonClick={() => this.chooseNewNumberOfSides()}
             />
     <hr />
+    <h4 style={{textAlign: 'center'}}>React tutorial to build todo list</h4>
         <TodoContainer />
       </div>
     )
