@@ -8,17 +8,17 @@ class TodoContainer extends React.Component {
     state = {
         todos: [
         {
-            id: 1,
+            id: uuidv4(),
             title: "setup dev env",
             completed: true
         },
         {
-            id: 2,
+            id: uuidv4(),
             title: "Dev website and add content",
             completed: false
         },
         {
-            id: 3,
+            id: uuidv4(),
             title: "Deploy to server",
             completed: false
         },
