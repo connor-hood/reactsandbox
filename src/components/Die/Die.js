@@ -44,7 +44,7 @@ class Die extends Component {
                 <h2>Die value: {this.state.value}</h2>
                 {/* this is how you call props in from outside this file in main.js */}
                 <button onClick={() => this.props.buttonClick(this.getUserInput())}>
-                    Click Me!
+                    Random Movie Callback
                 </button>
                 <button onClick={() => this.props.sideButtonClick(this.getSideInput())}>
                     Set Side Count

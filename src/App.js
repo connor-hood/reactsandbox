@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Matchup from '../Matchup/Matchup';
-import Die from '../Die/Die';
-import TodoContainer from '../TodoContainer/todoContainer';
-import Clock from '../Clock/clock';
+import Matchup from './components/Matchup/Matchup';
+import Die from './components/Die/Die';
+import TodoContainer from './components/TodoContainer/todoContainer';
+import Clock from './components/Clock/clock';
 
-import "../../App.css"
+import './App.css'
 
-class Main extends Component{
+class App extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -28,7 +28,7 @@ class Main extends Component{
   render(){
     return(
       <Router>
-      <div className='App'>
+      <div>
           <h1 style={{textAlign:'center'}}>React Sandbox</h1>
           <p>Hopefully this nav section works</p>
           <ul>
@@ -39,8 +39,8 @@ class Main extends Component{
           <Switch>
             <Route exact path="/matchup" component={Matchup}>
               <Matchup 
-              homeTeam="Team 1"
-              awayTeam="Team 2" />
+              homeTeam="Falcons"
+              awayTeam="Bucks" />
             </Route>
             <Route exact path="/dice" component={Die}>
               <Die 
@@ -67,4 +67,4 @@ class Main extends Component{
   }
 }
 
-export default Main;
+export default App;
