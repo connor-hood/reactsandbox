@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Matchup from './components/Matchup/Matchup';
 import Die from './components/Die/Die';
-import TodoContainer from './components/TodoContainer/todoContainer';
 import Clock from './components/Clock/clock';
 
 import './App.css'
