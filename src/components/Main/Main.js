@@ -42,23 +42,24 @@ class Main extends Component{
               homeTeam="Team 1"
               awayTeam="Team 2" />
             </Route>
-            <Route exact path="/dice" component={Die} />
-            <Route exact path="/matchup" component={Matchup} />
+            <Route exact path="/dice" component={Die}>
+              <Die 
+              numberOfSides={this.state.numberOfSides}
+              buttonClick={(message) => this.display(message)}
+              sideButtonClick={() => this.chooseNewNumberOfSides()}/>
+            </Route>
+            <Route exact path="/clock" component={Clock}>
+              <Clock />
+            </Route>
           <h4 style={{textAlign: 'center'}}>Demonstration of props being passed into component</h4>
-        <h1>Match up of the Week</h1>
-    <hr />
+    
     {/* number of sides gets passed down to Die from state */}
     <h4 style={{textAlign: 'center'}}>Demonstration of functions from components being passed back up from child</h4>
-        <Die 
-            numberOfSides={this.state.numberOfSides}
-            buttonClick={(message) => this.display(message)}
-            sideButtonClick={() => this.chooseNewNumberOfSides()}
-            />
-    <hr />
+    
     <h4 style={{textAlign: 'center'}}>React tutorial to build todo list</h4>
         
-    <hr />
-        <Clock />
+    
+        
         </Switch>
       </div>
       </Router>

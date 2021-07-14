@@ -20,7 +20,9 @@ export class Clock extends Component {
     }
     render() { 
         return ( 
-            <div></div>
+            <div>
+                <h1>Coming Soon!</h1>
+            </div>
          );
     }
 }
