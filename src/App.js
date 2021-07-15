@@ -24,17 +24,43 @@ class App extends Component{
       })
   }
 
+   onMouseOver = event => {
+    const el = event.target;
+    let colorhex = [
+      "#7AF377",
+      "#3498DB",
+      "#F1C530",
+      "#F29C29",
+      "#8E44AD",
+      "#4AA086",
+      "#E74C3C",
+      "#65CC71",
+      "#D3541B",
+      "#EB4367",
+      "#74F7D9",
+      "#DDA8FC"
+    ];
+    el.style.color = colorhex[Math.floor(Math.random() * 12)];
+  };
+
+  onMouseOut = event => {
+    const el = event.target;
+    let black = "#000000";
+    el.style.color = black;
+  }
+
   render(){
     return(
       <Router>
       <div>
           <h1 style={{textAlign:'center'}}>React Sandbox</h1>
           <p>Hopefully this nav section works</p>
-          <ul>
+          <ul onMouseEnter={event => this.onMouseOver(event)} onMouseOut={event => this.onMouseOut(event)}>
             <li><Link to={'/matchup'}>Matchup</Link></li>
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
             <li><Link to={'/clock'}>Clock</Link></li>
           </ul>
+          <hr />
           <Switch>
             <Route exact path="/matchup" component={Matchup}>
               <Matchup 
