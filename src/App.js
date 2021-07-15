@@ -54,7 +54,7 @@ class App extends Component{
       <Router>
       <div>
           <h1 style={{textAlign:'center'}}>React Sandbox</h1>
-          <p>Hopefully this nav section works</p>
+          <p>Select Component to play with</p>
           <ul onMouseEnter={event => this.onMouseOver(event)} onMouseOut={event => this.onMouseOut(event)}>
             <li><Link to={'/matchup'}>Matchup</Link></li>
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
@@ -63,11 +63,13 @@ class App extends Component{
           <hr />
           <Switch>
             <Route exact path="/matchup" component={Matchup}>
+          
               <Matchup 
               homeTeam="Falcons"
               awayTeam="Bucks" />
             </Route>
             <Route exact path="/dice" component={Die}>
+              {/* number of sides gets passed down to Die from state */}
               <Die 
               numberOfSides={this.state.numberOfSides}
               buttonClick={(message) => this.display(message)}
@@ -75,16 +77,7 @@ class App extends Component{
             </Route>
             <Route exact path="/clock" component={Clock}>
               <Clock />
-            </Route>
-          <h4 style={{textAlign: 'center'}}>Demonstration of props being passed into component</h4>
-    
-    {/* number of sides gets passed down to Die from state */}
-    <h4 style={{textAlign: 'center'}}>Demonstration of functions from components being passed back up from child</h4>
-    
-    <h4 style={{textAlign: 'center'}}>React tutorial to build todo list</h4>
-        
-    
-        
+            </Route>        
         </Switch>
       </div>
       </Router>

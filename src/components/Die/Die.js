@@ -39,6 +39,7 @@ class Die extends Component {
     render(){
         return (
             <div>
+            <h4 style={{textAlign: 'center'}}>Demonstration of functions from components being passed back up from child</h4>
                 {/*this.props.numberOfSides since numberOfSides comes in from Main now */}
                 <h1>Die number of sides: {this.props.numberOfSides}</h1>
                 <h2>Die value: {this.state.value}</h2>
