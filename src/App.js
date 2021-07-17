@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Matchup from './components/Matchup/Matchup';
 import Die from './components/Die/Die';
 import Clock from './components/Clock/clock';
-
+import PracticeHook from './components/PracticeHook/practiceHook';
 import './App.css'
 
 class App extends Component{
@@ -59,11 +59,11 @@ class App extends Component{
             <li><Link to={'/matchup'}>Matchup</Link></li>
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
             <li><Link to={'/clock'}>Clock</Link></li>
+            <li><Link to={'/hooks'}>Hook Practice</Link></li>
           </ul>
           <hr />
           <Switch>
             <Route exact path="/matchup" component={Matchup}>
-          
               <Matchup 
               homeTeam="Falcons"
               awayTeam="Bucks" />
@@ -77,6 +77,9 @@ class App extends Component{
             </Route>
             <Route exact path="/clock" component={Clock}>
               <Clock />
+            </Route>
+            <Route exact path="/hooks" component={PracticeHook}>
+              
             </Route>        
         </Switch>
       </div>

@@ -28,7 +28,7 @@ class Die extends Component {
         });
     }
     setDieValue(){
-        return Math.floor(Math.random() * this.props.numberOfSides) + 1;
+        return Math.floor(Math.random() * this.props.numberOfSides);
     }
     getUserInput(){
         return prompt("What is your favorite movie?");
@@ -39,7 +39,7 @@ class Die extends Component {
     render(){
         return (
             <div>
-            <h4 style={{textAlign: 'center'}}>Demonstration of functions from components being passed back up from child</h4>
+            <p style={{textAlign: 'center'}}>Demonstration of functions from components being passed back up from child</p>
                 {/*this.props.numberOfSides since numberOfSides comes in from Main now */}
                 <h1>Die number of sides: {this.props.numberOfSides}</h1>
                 <h2>Die value: {this.state.value}</h2>
