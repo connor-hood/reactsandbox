@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const PracticeHook = () => {
-    const [count, setCount] = useState(4)
-    const [theme, setTheme] = useState('Blue')
+    //value in useState will be the default value
+    const [count, setCount] = useState(0)
     const [name, setName] = useState('')
 
     function decrementCount() {
@@ -11,7 +11,7 @@ const PracticeHook = () => {
 
     function incrementCount () {
         setCount(prevCount => prevCount + 1)
-        setTheme('red')
+        
     }
     return ( 
         <div>
@@ -19,17 +19,9 @@ const PracticeHook = () => {
                 <p>useState example</p>
                 <button onClick={decrementCount}>-</button>
                 <span>{count}</span>
-                <span>{theme}</span>
                 <button onClick={incrementCount}>+</button>
             </div>
-            <div>
-                <p>Custom example?</p>
-                <input
-                type="text"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                />
-            </div>
+           
         </div>
      );
 }
