@@ -16,3 +16,8 @@ li:hover {
 hr {
     border-top: 1px solid
 }
+
+.hook-space {
+    border: 3px;
+    border-color: blue;
+}

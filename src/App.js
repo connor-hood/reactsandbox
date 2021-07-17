@@ -5,6 +5,9 @@ import Die from './components/Die/Die';
 import Clock from './components/Clock/clock';
 import PracticeHook from './components/PracticeHook/practiceHook';
 import './App.css'
+import Random from './components/Random_V1/random_v1';
+import Tag from './components/Tag_V1/tag_v1';
+
 
 class App extends Component{
     constructor(props){
@@ -82,6 +85,10 @@ class App extends Component{
               
             </Route>        
         </Switch>
+        <div className="hook-space">
+          <Random />
+          <Tag />
+        </div>
       </div>
       </Router>
     )
