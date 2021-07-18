@@ -62,14 +62,15 @@ class App extends Component{
             <li><Link to={'/matchup'}>Matchup</Link></li>
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
             <li><Link to={'/clock'}>Clock</Link></li>
-            <li><Link to={'/hooks'}>Hook Practice</Link></li>
+            <li><Link to={'/hooks'}>useState hook example</Link></li>
+            <li><Link to={'/gifs'}>Gif Generator</Link></li>
           </ul>
           <hr />
           <Switch>
             <Route exact path="/matchup" component={Matchup}>
               <Matchup 
-              homeTeam="Falcons"
-              awayTeam="Bucks" />
+              homeTeam="My mind"
+              awayTeam="My happiness" />
             </Route>
             <Route exact path="/dice" component={Die}>
               {/* number of sides gets passed down to Die from state */}
@@ -82,13 +83,13 @@ class App extends Component{
               <Clock />
             </Route>
             <Route exact path="/hooks" component={PracticeHook}>
-              
+              <PracticeHook />
             </Route>        
+            <Route exact path="/gifs" >
+              <Random />
+              <Tag /> 
+            </Route>
         </Switch>
-        <div className="hook-space">
-          <Random />
-          <Tag />
-        </div>
       </div>
       </Router>
     )

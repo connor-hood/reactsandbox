@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../PracticeHook/practiceHook.css'
 
 import useGif from '../useGif';
 

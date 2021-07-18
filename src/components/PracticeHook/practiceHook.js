@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../App.css'
 
 const PracticeHook = () => {
     //value in useState will be the default value
@@ -14,11 +15,11 @@ const PracticeHook = () => {
     }
     return ( 
         <div>
-            <div>
-                <p>useState example</p>
-                <button onClick={decrementCount}>-</button>
-                <span>{count}</span>
-                <button onClick={incrementCount}>+</button>
+            <div className="ph_container">
+                <h4>useState example</h4>
+                <button className="mbutton" onClick={decrementCount}>-</button>
+                <span className="numberBox">{count}</span>
+                <button className="pbutton" onClick={incrementCount}>+</button>
             </div>
            
         </div>
