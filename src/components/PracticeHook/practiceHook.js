@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const PracticeHook = () => {
     //value in useState will be the default value
     const [count, setCount] = useState(0)
-    const [name, setName] = useState('')
 
     function decrementCount() {
         setCount(prevCount => prevCount - 1)
