@@ -7,6 +7,7 @@ import PracticeHook from './components/PracticeHook/practiceHook';
 import './App.css'
 import Random from './components/Random/random_v1';
 import Tag from './components/Tag/tag_v1';
+import Calculator from './components/Calculator/calculator';
 
 
 class App extends Component{
@@ -61,7 +62,7 @@ class App extends Component{
           <ul onMouseEnter={event => this.onMouseOver(event)} onMouseOut={event => this.onMouseOut(event)}>
             <li><Link to={'/matchup'}>Matchup</Link></li>
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
-            <li><Link to={'/clock'}>Clock</Link></li>
+            <li><Link to={'/temp'}>Temperature Calculator</Link></li>
             <li><Link to={'/hooks'}>useState hook example</Link></li>
             <li><Link to={'/gifs'}>Gif Generator</Link></li>
           </ul>
@@ -79,8 +80,8 @@ class App extends Component{
               buttonClick={(message) => this.display(message)}
               sideButtonClick={() => this.chooseNewNumberOfSides()}/>
             </Route>
-            <Route exact path="/clock" component={Clock}>
-              <Clock />
+            <Route exact path="/temp" component={Calculator}>
+              <Calculator />
             </Route>
             <Route exact path="/hooks" component={PracticeHook}>
               <PracticeHook />
