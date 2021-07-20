@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import API_KEY from '../../apis/APIKEYS';
-const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`
+import GIPHY_API_KEY from '../../apis/APIKEYS';
+const url = `https://api.giphy.com/v1/gifs/random?api_key=${GIPHY_API_KEY}`
 
 const useGif = (tag) => {
     const [gif, setGif] = useState('');
