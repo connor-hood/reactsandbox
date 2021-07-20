@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Matchup from './components/Matchup/Matchup';
 import Die from './components/Die/Die';
-import Clock from './components/Clock/clock';
-import PracticeHook from './components/PracticeHook/practiceHook';
-import './App.css'
+import PracticeStateHook from './components/PracticeStateHook/practiceStateHook';
 import Random from './components/Random/random_v1';
 import Tag from './components/Tag/tag_v1';
 import Calculator from './components/Calculator/calculator';
 
+import './App.css'
 
 class App extends Component{
     constructor(props){
@@ -63,7 +62,7 @@ class App extends Component{
             <li><Link to={'/matchup'}>Matchup</Link></li>
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
             <li><Link to={'/temp'}>Temperature Calculator</Link></li>
-            <li><Link to={'/hooks'}>useState hook example</Link></li>
+            <li><Link to={'/statehook'}>useState hook example</Link></li>
             <li><Link to={'/gifs'}>Gif Generator</Link></li>
           </ul>
           <hr />
@@ -83,8 +82,8 @@ class App extends Component{
             <Route exact path="/temp" component={Calculator}>
               <Calculator />
             </Route>
-            <Route exact path="/hooks" component={PracticeHook}>
-              <PracticeHook />
+            <Route exact path="/statehook" component={PracticeStateHook}>
+              <PracticeStateHook />
             </Route>        
             <Route exact path="/gifs" >
               <Random />

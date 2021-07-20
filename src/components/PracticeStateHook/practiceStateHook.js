@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../../App.css'
 
-const PracticeHook = () => {
-    //value in useState will be the default value
+const PracticeStateHook = () => {
+    //value in useState will be the default value, here it would be a 0, which is what renders on page.
+    //setCount is used in the hook to manage the state
     const [count, setCount] = useState(0)
 
     function decrementCount() {
@@ -21,9 +22,8 @@ const PracticeHook = () => {
                 <span className="numberBox">{count}</span>
                 <button className="pbutton" onClick={incrementCount}>+</button>
             </div>
-           
         </div>
      );
 }
  
-export default PracticeHook;
+export default PracticeStateHook;
