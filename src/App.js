@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Matchup from './components/Matchup/Matchup';
 import Die from './components/Die/Die';
 import PracticeStateHook from './components/PracticeStateHook/practiceStateHook';
+import PracticeEffectHook from './components/PracticeEffectHook/practiceEffectHook';
+import PracticeEffectHookTwo from './components/PracticeEffectHook2/practiceEffectHook2';
 import Random from './components/Random/random_v1';
 import Tag from './components/Tag/tag_v1';
 import Calculator from './components/Calculator/calculator';
@@ -63,6 +65,8 @@ class App extends Component{
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
             <li><Link to={'/temp'}>Temperature Calculator</Link></li>
             <li><Link to={'/statehook'}>useState hook example</Link></li>
+            <li><Link to={'/effecthook'}>useEffect hook example</Link></li>
+            <li><Link to={'/effecthooktwo'}>useEffect hook example #2</Link></li>
             <li><Link to={'/gifs'}>Gif Generator</Link></li>
           </ul>
           <hr />
@@ -84,7 +88,13 @@ class App extends Component{
             </Route>
             <Route exact path="/statehook" component={PracticeStateHook}>
               <PracticeStateHook />
-            </Route>        
+            </Route>  
+            <Route exact path="/effecthook" component={PracticeEffectHook}>
+              <PracticeEffectHook />
+            </Route>   
+            <Route exact path="/effecthooktwo" component={PracticeEffectHookTwo}>
+              <PracticeEffectHookTwo />
+            </Route>     
             <Route exact path="/gifs" >
               <Random />
               <Tag /> 
