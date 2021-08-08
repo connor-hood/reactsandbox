@@ -63,13 +63,14 @@ class App extends Component{
           <ul onMouseEnter={event => this.onMouseOver(event)} onMouseOut={event => this.onMouseOut(event)}>
             <li><Link to={'/matchup'}>Matchup</Link></li>
             <li><Link to={'/dice'}>Custom Random Dice</Link></li>
-            <li><Link to={'/temp'}>Temperature Calculator</Link></li>
+            <li style={{textDecoration:'line-through'}}><Link to={'/temp'}>Temperature Calculator</Link></li>
             <li><Link to={'/statehook'}>useState hook example</Link></li>
             <li><Link to={'/effecthook'}>useEffect hook example</Link></li>
             <li><Link to={'/effecthooktwo'}>useEffect hook example #2</Link></li>
             <li><Link to={'/gifs'}>Gif Generator</Link></li>
           </ul>
           <hr />
+          <div className="maincontainer">
           <Switch>
             <Route exact path="/matchup" component={Matchup}>
               <Matchup 
@@ -100,6 +101,7 @@ class App extends Component{
               <Tag /> 
             </Route>
         </Switch>
+        </div>
       </div>
       </Router>
     )

@@ -1,3 +1,6 @@
+.maincontainer {
+    text-align: center;
+}
 li {
     list-style: none;
     text-align: center;
@@ -15,9 +18,7 @@ li {
 .mbutton{
     background-color: red;
 }
-.container {
-    float: left;  
-}
+
 .numberBox {
     box-sizing: border-box;
 }

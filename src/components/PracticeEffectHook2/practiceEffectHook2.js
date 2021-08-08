@@ -15,6 +15,7 @@ export default function PracticeEffectHookTwo() {
     }, [])
     return (
         <div>
+            <p>This number will change as you resize the window</p>
            {windowWidth}
         </div>
     )
