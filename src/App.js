@@ -74,8 +74,8 @@ class App extends Component{
           <Switch>
             <Route exact path="/matchup" component={Matchup}>
               <Matchup 
-              homeTeam="My mind"
-              awayTeam="My happiness" />
+              homeTeam="Patriots"
+              awayTeam="Bears" />
             </Route>
             <Route exact path="/dice" component={Die}>
               {/* number of sides gets passed down to Die from state */}
